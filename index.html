@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Planning</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="print.css" media="print" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weekly Planning</h1>
+
+      <div class="categories-section">
+        <h2>Categories & Goals</h2>
+        <div id="categories-container">
+          <!-- Categories will be added here -->
+        </div>
+        <button id="add-category-btn" class="btn primary">Add Category</button>
+      </div>
+
+      <div class="plan-section">
+        <h2>Create Plan</h2>
+        <div class="name-input">
+          <label for="plan-name">Plan Name:</label>
+          <input type="text" id="plan-name" placeholder="Enter plan name" />
+        </div>
+        <div class="date-selection">
+          <div class="date-input">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" />
+          </div>
+          <div class="date-input">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" />
+          </div>
+          <button id="generate-plan-btn" class="btn primary">
+            Generate Plan
+          </button>
+          <button
+            id="print-plan-btn"
+            class="btn secondary"
+            style="display: none"
+          >
+            Print Plan
+          </button>
+        </div>
+        <div id="plan-output">
+          <!-- Plan will be displayed here -->
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

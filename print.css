@@ -1,0 +1,80 @@
+:root {
+  --box-shadow: none;
+}
+
+/* Hide everything except the plan */
+body > *:not(.container) {
+  display: none !important;
+}
+
+.container > *:not(.plan-section) {
+  display: none !important;
+}
+
+.plan-section > *:not(#plan-output) {
+  display: none !important;
+}
+
+/* Print-specific styles */
+body {
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-category {
+  page-break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+.plan-category h3 {
+  color: black;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.plan-goal {
+  margin-bottom: 0.75rem;
+}
+
+.plan-box {
+  border: 1px solid black;
+  background: white;
+}
+
+.plan-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid black;
+}
+
+.plan-heading h2 {
+  color: black;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.plan-dates {
+  color: black;
+  font-size: 1.1rem;
+}
+
+/* Ensure proper page breaks */
+@media print {
+  .plan-category {
+    page-break-inside: avoid;
+  }
+
+  .plan-goal {
+    page-break-inside: avoid;
+  }
+}
