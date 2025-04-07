@@ -214,7 +214,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Add formatDate helper function
   function formatDate(date) {
-    return date.toLocaleDateString('en-US', {
+    // Get the date string in YYYY-MM-DD format
+    const dateStr = date.toISOString().split('T')[0]
+    // Create a new date using the date string
+    const localDate = new Date(dateStr + 'T12:00:00')
+
+    return localDate.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
